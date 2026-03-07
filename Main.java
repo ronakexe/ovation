@@ -22,12 +22,16 @@ public class Main {
 
                 System.out.println("# of factors (max: 10)");
                 int numFactors = numFactorsInput.nextInt();
-
-                for (int i = 0; i < numFactors; i++){
+                if (numFactors <= 10 && numFactors > 0){
+                    for (int i = 0; i < numFactors; i++){
                     System.out.println("Factor #"+(i+1)+": ");
-                   String factorName = factorNameInput.nextLine();
+                    String factorName = factorNameInput.nextLine();
                     factorNames.add(factorName);
+                    }
+                } else {
+                    System.out.println("Please input a number between 1 and 10 inclusive");
                 }
+                
 
                 System.out.println();
                 System.out.println();
