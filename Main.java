@@ -33,7 +33,7 @@ public class Main {
                 System.out.println();
 
                 //name the factors
-                System.out.println("Name each of the factors: ");
+                System.out.println("Name each of the factors: ru");
                 if (numFactors <= 10 && numFactors > 0) {
                     for (int i = 0; i < numFactors; i++) {
                         System.out.print("Factor #" + (i + 1) + ": ");
