@@ -20,4 +20,13 @@ public class Community {
             output += allCommunities.get(i)+", ";
         return output;
     }
+    static public String getCommunitiesList(){
+        String output = "";
+        for (int i = 0; i<allCommunities.size(); i++){
+            int bro = i+1;
+            output += "["+bro+"] "+allCommunities.get(i)+"\n";
+        }
+        return output;
+    }
+
 }
