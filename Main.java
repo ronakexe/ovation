@@ -65,7 +65,7 @@ public class Main {
                 System.out.println("entry made");
                 System.out.println();
             } else if (option.equals("c")) {
-                Community.getCommunities();
+                System.out.println(Community.getCommunities());
 
                 System.out.println();
                 System.out.println();
