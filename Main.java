@@ -9,11 +9,9 @@ public class Main {
         Scanner communityNameInput = new Scanner(System.in);
         Scanner numFactorsInput = new Scanner(System.in);
         Scanner factorNameInput = new Scanner(System.in);
-        Scanner factorWeightsInput = new Scanner(System.in);
+        Scanner factorWeightsInput = new Scanner(System.in);        
 
-        ArrayList<String> factorNames = new ArrayList<String>();
-        ArrayList<Community> communities = new ArrayList<Community>();
-        ArrayList<Integer> communityWeights = new ArrayList<Integer>();
+        
 
         System.out.println("[OVATION]\nRate anything");
         program = true;
@@ -21,7 +19,12 @@ public class Main {
             System.out.println(
                     "Options:\n[a] create a community\n[b]make an entry\n[c] view communities\n[d] view entries");
             String option = optionInput.nextLine();
+            System.out.println();
             if (option.equals("a")) {
+                ArrayList<String> factorNames = new ArrayList<String>();
+                ArrayList<Community> communities = new ArrayList<Community>();
+                ArrayList<Integer> communityWeights = new ArrayList<Integer>();
+
                 // name the community 
                 System.out.println("Community name: ");
                 String communityName = communityNameInput.nextLine();
@@ -33,7 +36,7 @@ public class Main {
                 System.out.println();
 
                 //name the factors
-                System.out.println("Name each of the factors: ru");
+                System.out.println("Name each of the factors: ");
                 if (numFactors <= 10 && numFactors > 0) {
                     for (int i = 0; i < numFactors; i++) {
                         System.out.print("Factor #" + (i + 1) + ": ");
@@ -55,13 +58,16 @@ public class Main {
 
                 Community newCommunity = new Community(communityName, factorNames, communityWeights);
 
+
                 System.out.println();
                 System.out.println();
             } else if (option.equals("b")) {
                 System.out.println("entry made");
                 System.out.println();
             } else if (option.equals("c")) {
-                System.out.println("community 1, community 2, community 3");
+                Community.getCommunities();
+
+                System.out.println();
                 System.out.println();
             } else if (option.equals("d")) {
                 System.out.println("entry 1, entry 2, entry 3");
