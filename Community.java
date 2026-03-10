@@ -7,6 +7,8 @@ public class Community {
     private ArrayList<Integer> weights;
     private static ArrayList<String> allCommunities = new ArrayList<>();
 
+    Scanner slotc1 = new Scanner(System.in);
+
     public Community(String nameIn, ArrayList<String> factorsIn, ArrayList<Integer> weightsIn){
         name = nameIn;
         factors = new ArrayList<>(factorsIn);
@@ -30,11 +32,13 @@ public class Community {
         return output;
     }
 
-    public int getFactor(int factorIndex){
-        Scanner scanTemp = new Scanner(System.in);
-        System.out.println("Does this work one? ");
-        int factorInput = scanTemp.nextInt();
+    public void makeEntry(int factorIndex, String name){
+        ArrayList<Double> factorInputTemp = new ArrayList<Double>();
+        for (int i = 0; i<factors.size(); i++){
+            System.out.println("How would you rate "+name+" based on "+factors.get(factorIndex)+"? ");
+            double brobro = slotc1.nextDouble();
+            factorInputTemp.add(brobro);
         
-        return factorInput;
+        }
     }
 }

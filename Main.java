@@ -77,8 +77,6 @@ public class Main {
                 System.out.println();
             } else if (option.equals("d")) {
                 System.out.println("entry 1, entry 2, entry 3");
-                communities.get(0).getFactor;
-                System.out.println();
             } else {
                 System.out.print("Invalid option");
                 System.out.println();
