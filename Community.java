@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Community {
     private String name;
@@ -29,4 +30,11 @@ public class Community {
         return output;
     }
 
+    public int getFactor(int factorIndex){
+        Scanner scanTemp = new Scanner(System.in);
+        System.out.println("Does this work one? ");
+        int factorInput = scanTemp.nextInt();
+        
+        return factorInput;
+    }
 }

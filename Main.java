@@ -64,7 +64,11 @@ public class Main {
                 System.out.println(Community.getCommunitiesList());
                 System.out.print("For which community? ");  
                 int communityPick = slot1.nextInt();
-                communityPick = 1;
+                System.out.println();
+                System.out.println("Name the entry: ");
+                String entryName = slot2.nextLine();
+
+                System.out.println();
                 System.out.println();
             } else if (option.equals("c")) {
                 System.out.println(Community.getCommunities());
@@ -73,6 +77,7 @@ public class Main {
                 System.out.println();
             } else if (option.equals("d")) {
                 System.out.println("entry 1, entry 2, entry 3");
+                communities.get(0).getFactor;
                 System.out.println();
             } else {
                 System.out.print("Invalid option");
