@@ -4,14 +4,14 @@ import java.util.ArrayList;
 public class Main {
     static boolean program = false; // true is on; false is off
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Scanner optionInput = new Scanner(System.in);
         Scanner slot1 = new Scanner(System.in);
         Scanner slot2 = new Scanner(System.in);
         Scanner slot3 = new Scanner(System.in);
         Scanner slot4 = new Scanner(System.in);        
 
-        
+        ArrayList<Community> communities = new ArrayList<Community>();
 
         System.out.println("[OVATION]\nRate anything");
         program = true;
@@ -22,14 +22,13 @@ public class Main {
             System.out.println();
             if (option.equals("a")) {
                 ArrayList<String> factorNames = new ArrayList<String>();
-                ArrayList<Community> communities = new ArrayList<Community>();
                 ArrayList<Integer> communityWeights = new ArrayList<Integer>();
 
                 // name the community 
                 System.out.println("Community name: ");
                 String communityName = slot1.nextLine();
                 System.out.println();
-
+                
                 //number of factors
                 System.out.println("# of factors (max: 10)");
                 int numFactors = slot2.nextInt();
@@ -57,20 +56,19 @@ public class Main {
                 }
 
                 Community newCommunity = new Community(communityName, factorNames, communityWeights);
-
+                communities.add(newCommunity);
 
                 System.out.println();
                 System.out.println();
             } else if (option.equals("b")) {
-                System.out.println("entry made");
                 System.out.println(Community.getCommunitiesList());
-                System.out.print("For which community? ");
+                System.out.print("For which community? ");  
                 int communityPick = slot1.nextInt();
-
+                communityPick = 1;
                 System.out.println();
             } else if (option.equals("c")) {
                 System.out.println(Community.getCommunities());
-
+                
                 System.out.println();
                 System.out.println();
             } else if (option.equals("d")) {
