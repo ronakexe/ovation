@@ -1,5 +1,6 @@
 public class Entry {
-   public Entry(int factor1) {
+   
+   public Entry(String name, double rating) {
         
    } 
 }

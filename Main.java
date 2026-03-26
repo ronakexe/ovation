@@ -5,11 +5,7 @@ public class Main {
     static boolean program = false; // true is on; false is off
 
         public static void main(String[] args) {
-        Scanner optionInput = new Scanner(System.in);
-        Scanner slot1 = new Scanner(System.in);
-        Scanner slot2 = new Scanner(System.in);
-        Scanner slot3 = new Scanner(System.in);
-        Scanner slot4 = new Scanner(System.in);        
+        Scanner scan = new Scanner(System.in);       
 
         ArrayList<Community> communities = new ArrayList<Community>();
 
@@ -18,7 +14,7 @@ public class Main {
         while (program == true) {
             System.out.println(
                     "Options:\n[a] create a community\n[b] make an entry\n[c] view communities\n[d] view entries");
-            String option = optionInput.nextLine();
+            String option = scan.nextLine();
             System.out.println();
             if (option.equals("a")) {
                 ArrayList<String> factorNames = new ArrayList<String>();
@@ -26,12 +22,13 @@ public class Main {
 
                 // name the community 
                 System.out.println("Community name: ");
-                String communityName = slot1.nextLine();
+                String communityName = scan.nextLine();
                 System.out.println();
                 
                 //number of factors
                 System.out.println("# of factors (max: 10)");
-                int numFactors = slot2.nextInt();
+                int numFactors = scan.nextInt();
+                scan.nextLine();
                 System.out.println();
 
                 //name the factors
@@ -39,7 +36,7 @@ public class Main {
                 if (numFactors <= 10 && numFactors > 0) {
                     for (int i = 0; i < numFactors; i++) {
                         System.out.print("Factor #" + (i + 1) + ": ");
-                        String factorName = slot3.nextLine();
+                        String factorName = scan.nextLine();
                         factorNames.add(factorName);
                     }
                 } else {
@@ -51,7 +48,7 @@ public class Main {
                 System.out.println("Out of 10, weigh each factor's importance");
                 for (int i = 0; i < numFactors; i++) {
                     System.out.print(factorNames.get(i)+"'s weight: ");
-                    int weight = slot4.nextInt();
+                    int weight = scan.nextInt();
                     communityWeights.add(weight);
                 }
 
@@ -62,11 +59,12 @@ public class Main {
                 System.out.println();
             } else if (option.equals("b")) {
                 System.out.println(Community.getCommunitiesList());
-                System.out.print("For which community? ");  
-                int communityPick = slot1.nextInt();
-                System.out.println();
-                System.out.println("Name the entry: ");
-                String entryName = slot2.nextLine();
+                System.out.print("For which community? ");         
+                int communityPick = scan.nextInt();
+                scan.nextLine();                                
+                System.out.println();                              
+                System.out.print("Name the entry: ");              
+                String entryName = scan.nextLine();                  
 
                 System.out.println();
                 System.out.println();
@@ -84,3 +82,5 @@ public class Main {
         }
     }
 }
+
+

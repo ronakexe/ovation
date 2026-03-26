@@ -38,7 +38,6 @@ public class Community {
             System.out.println("How would you rate "+name+" based on "+factors.get(factorIndex)+"? ");
             double brobro = slotc1.nextDouble();
             factorInputTemp.add(brobro);
-        
         }
     }
 }
